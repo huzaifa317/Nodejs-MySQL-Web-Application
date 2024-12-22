@@ -1,11 +1,12 @@
 // This is the mysql connection block
-var mysql = require("mysql");
+require("dotenv").config();
+var mysql = require("mysql2");
 // Create the connection
 var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "Henry Books Store"
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 });
 
 connection.connect(function(err) {

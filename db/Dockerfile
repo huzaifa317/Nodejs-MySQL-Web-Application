@@ -1,0 +1,5 @@
+FROM mysql 
+ENV MYSQL_ROOT_PASSWORD=root123 \
+    MYSQL_DATABASE=example_db
+EXPOSE 3306
+
